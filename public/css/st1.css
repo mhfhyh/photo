@@ -1,0 +1,58 @@
+h3 {
+    color: white;
+    background-color: black;
+    font-size: 30px;
+  text-align: center;
+    margin: 0;
+  padding: 9;
+}
+
+body {
+    background-color: white;
+    margin: 0;   
+}
+
+
+img{
+
+    border-color:black;
+    padding: 6;
+}
+
+form{
+text-align:right;
+ padding: 10;
+}
+
+
+#right{
+    width:45%;
+    direction:ltr; 
+    padding:10px;
+    float:right;
+}
+
+#right2{
+    direction:ltr; 
+    padding:1px;
+    float:right;
+}
+
+#left{
+    direction:ltr; 
+    padding:10px;
+    float:right;
+}
+
+#left2{
+    direction:rtl; 
+    padding:5px;
+    float:right;
+}
+
+#left3{
+    direction:ltr; 
+    padding:0px;
+    float:left;
+}
+

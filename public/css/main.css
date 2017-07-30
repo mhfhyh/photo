@@ -1,0 +1,89 @@
+h1 {
+  font-family: 'Telex', sans-serif;
+    color: black;
+    background-color: #fffc00;
+        font-size: 40px;
+  text-align: center;
+    margin: 0px;
+  padding: 9px;
+}
+
+
+h2 {
+    background-color: white;
+  text-align: center;
+    padding-bottom:0.5em;
+margin: 0;
+    
+}
+
+h3 {
+  
+    font-family: 'Telex', sans-serif;
+    color: white;
+    background-color: black;
+    font-size: 40px;
+  text-align: center;
+    margin: 0;
+  padding: 8px;
+}
+
+h4{
+    text-align: center;
+      margin: 0;
+    padding: 3px;
+}
+
+body {
+    background-color: white;
+    margin: 0;
+    
+}
+
+p {
+    text-align: center;
+    background-color: #fffc00;
+        margin: 0;
+}
+
+img{
+    margin: 5px;
+    border-color:black;
+}
+
+.mypic img{
+    -webkit-filter: brightness(100%);
+    -webkit-transition: all 1s ease;
+     -moz-transition: all 1s ease;
+       -o-transition: all 1s ease;
+      -ms-transition: all 1s ease;
+          transition: all 1s ease;
+}
+
+.mypic img:hover {
+    -webkit-filter: brightness(40%);
+  width: 200px;
+  height: 332px;
+}
+
+#loc{
+    padding-bottom:20px;
+
+          text-align:center;
+
+}
+
+#arrw{
+
+
+}
+
+#text{
+      font-family: 'Cairo', sans-serif;
+    font-size: 35px;
+
+
+
+
+
+}
