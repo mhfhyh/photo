@@ -17,14 +17,16 @@
 <a href="add"> إضافة صورة</a>
      @endif
 </h1>
+
 <h3>MySnapchat</h3>
 <br><br>
+@include('layouts.sidebar')
+
 <div id="loc">
     <div id="text">تركيا - صيف 2016</div>
     <div id="arrw">
         <h2> <img src="https://a.top4top.net/p_562qdwxk1.png" Width="30px"/></h2>
     </div>
-
 
 </div>
 <h2>

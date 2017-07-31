@@ -87,3 +87,17 @@ img{
 
 
 }
+
+#sidebar{
+    width:10%;
+    direction:ltr;
+    padding:10px;
+    float:right;
+}
+#content{
+    width:90%;
+    direction:ltr;
+    padding:10px;
+    float:left;
+}
+
