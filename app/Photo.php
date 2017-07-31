@@ -14,5 +14,15 @@ class Photo extends Model
 
     return $this->belongsTo(User::class);
 }
+public static  function archive(){
+
+    $archive = Photo::selectraw('year(date) year ,monthname(date) month,count(*) publiched_photos')
+        ->orderByRaw('min(date)')
+        ->groupBy('year','month')
+        ->get()->toArray();
+
+
+    return $archive ;
+    }
     //
 }

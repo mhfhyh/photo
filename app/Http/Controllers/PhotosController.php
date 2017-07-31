@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Photo;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
 
@@ -51,15 +52,24 @@ auth()->user()->add_photo(
 
     public function home(){
         if (auth()->check()){
-            $photos=Photo::all()->where('user_id','==',auth()->id());
-            $arr = Array('photo'=>$photos);
+            $photo=Photo::all()->where('user_id','==',auth()->id());
+            $archive = Photo::archive();
+
+            if($month=request('month')){
+                $photo->whereMonth('date',Carbon::parse($month)->month);
+            }
+            if ($year=request('year')){
+                $photo->whereYear('date',$year);
+            }
+
+            return View("admin.home",compact('photo','archive'));
         }
         else{
-            $photos=Photo::all();
-        $arr = Array('photo'=>$photos);
+            $photo=Photo::all();
+            return View("admin.home",compact('photo'));
         }
 
-        return View("admin.home",$arr);
+
     }
 
 
