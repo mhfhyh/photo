@@ -56,6 +56,7 @@ auth()->user()->add_photo(
             $archive = Photo::archive();
 
             if($month=request('month')){
+
                 $photo->whereMonth('date',Carbon::parse($month)->month);
             }
             if ($year=request('year')){
