@@ -15,6 +15,8 @@ class AppServiceProvider extends ServiceProvider
     {
         view()->composer('layouts.sidebar',function ($view){
             $view->with('archive',\App\Photo::archiveAll());
+
+
         });
     }
 
