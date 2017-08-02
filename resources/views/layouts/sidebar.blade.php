@@ -1,5 +1,4 @@
 <div id="sidebar">
-@if(auth()->check())
     <ol>
         @foreach($archive as $item)
                 <li>
@@ -7,6 +6,5 @@
                         {{$item['year'].' '.$item['month']}}</a>
                 </li>
         @endforeach
-@endif
     </ol>
 </div>

@@ -51,18 +51,14 @@ auth()->user()->add_photo(
 
 
     public function home(){
+
         if (auth()->check()){
             $photo=Photo::all()->where('user_id','==',auth()->id());
-            $archive = Photo::archive();
+            $archive = Photo::archive(auth()->id());
 
-            if($month=request('month')){
-
-                $photo->whereMonth('date',Carbon::parse($month)->month);
-            }
-            if ($year=request('year')){
-                $photo->whereYear('date',$year);
-            }
-
+           if (\request('month')){
+               $photo = Photo::latest()->filter( request(['month','year']))->get();}
+            $photo = $photo->where('user_id','==',auth()->id());
             return View("admin.home",compact('photo','archive'));
         }
         else{
